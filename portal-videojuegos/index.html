@@ -1,0 +1,520 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Portal de videojuegos online">
+
+    <title>NEXUS ARCADE</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==========================================
+         BARRA DE NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">◈</span>
+            NEXUS<span>ARCADE</span>
+        </div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#juegos">Juegos</a>
+            <a href="#categorias">Categorías</a>
+        </nav>
+
+        <div class="search-container">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Buscar juego..."
+            >
+
+            <button id="searchButton">
+                🔍
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==========================================
+         CONTENIDO PRINCIPAL
+    =========================================== -->
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-content">
+
+                <p class="hero-small">
+                    ⚡ ARCADE ONLINE
+                </p>
+
+                <h1>
+                    JUEGA.
+                    <span>DESCUBRE.</span>
+                    REPITE.
+                </h1>
+
+                <p class="hero-description">
+                    Descubre videojuegos creados para jugar
+                    directamente desde tu navegador.
+                </p>
+
+                <button class="hero-button"
+                        onclick="scrollToGames()">
+
+                    EXPLORAR JUEGOS
+                    <span>→</span>
+
+                </button>
+
+            </div>
+
+            <div class="hero-decoration">
+
+                <div class="circle circle-1"></div>
+                <div class="circle circle-2"></div>
+                <div class="circle circle-3"></div>
+
+                <div class="controller">
+                    🎮
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CATEGORÍAS
+        =========================================== -->
+
+        <section class="categories" id="categorias">
+
+            <div class="section-title">
+
+                <span class="line"></span>
+
+                <h2>CATEGORÍAS</h2>
+
+                <span class="line"></span>
+
+            </div>
+
+            <div class="category-container">
+
+                <button class="category active"
+                        data-category="todos">
+
+                    🎮 Todos
+
+                </button>
+
+                <button class="category"
+                        data-category="accion">
+
+                    ⚔️ Acción
+
+                </button>
+
+                <button class="category"
+                        data-category="aventura">
+
+                    🗺️ Aventura
+
+                </button>
+
+                <button class="category"
+                        data-category="arcade">
+
+                    👾 Arcade
+
+                </button>
+
+                <button class="category"
+                        data-category="estrategia">
+
+                    🧠 Estrategia
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             JUEGOS
+        =========================================== -->
+
+        <section class="games-section" id="juegos">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="section-label">
+                        COLECCIÓN
+                    </p>
+
+                    <h2>
+                        JUEGOS DISPONIBLES
+                    </h2>
+
+                </div>
+
+                <span id="gameCounter">
+                    4 JUEGOS
+                </span>
+
+            </div>
+
+
+            <div class="games-grid" id="gamesGrid">
+
+
+                <!-- JUEGO 1 -->
+
+                <article class="game-card"
+                         data-category="arcade"
+                         data-name="Cyber Run">
+
+                    <div class="game-image cyber-run">
+
+                        <span class="game-tag">
+                            NUEVO
+                        </span>
+
+                        <div class="game-icon">
+                            ⚡
+                        </div>
+
+                    </div>
+
+                    <div class="game-info">
+
+                        <p class="game-category">
+                            ARCADE
+                        </p>
+
+                        <h3>
+                            Cyber Run
+                        </h3>
+
+                        <p>
+                            Corre, esquiva obstáculos
+                            y consigue la mayor puntuación.
+                        </p>
+
+                        <button class="play-button"
+                                onclick="playGame('Cyber Run')">
+
+                            JUGAR AHORA
+                            <span>▶</span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- JUEGO 2 -->
+
+                <article class="game-card"
+                         data-category="accion"
+                         data-name="Space War">
+
+                    <div class="game-image space-war">
+
+                        <span class="game-tag">
+                            POPULAR
+                        </span>
+
+                        <div class="game-icon">
+                            🚀
+                        </div>
+
+                    </div>
+
+                    <div class="game-info">
+
+                        <p class="game-category">
+                            ACCIÓN
+                        </p>
+
+                        <h3>
+                            Space War
+                        </h3>
+
+                        <p>
+                            Defiende la galaxia
+                            contra enemigos espaciales.
+                        </p>
+
+                        <button class="play-button"
+                                onclick="playGame('Space War')">
+
+                            JUGAR AHORA
+                            <span>▶</span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- JUEGO 3 -->
+
+                <article class="game-card"
+                         data-category="accion"
+                         data-name="Zombie X">
+
+                    <div class="game-image zombie-x">
+
+                        <span class="game-tag">
+                            DESTACADO
+                        </span>
+
+                        <div class="game-icon">
+                            🧟
+                        </div>
+
+                    </div>
+
+                    <div class="game-info">
+
+                        <p class="game-category">
+                            ACCIÓN
+                        </p>
+
+                        <h3>
+                            Zombie X
+                        </h3>
+
+                        <p>
+                            Sobrevive a oleadas
+                            de enemigos.
+                        </p>
+
+                        <button class="play-button"
+                                onclick="playGame('Zombie X')">
+
+                            JUGAR AHORA
+                            <span>▶</span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- JUEGO 4 -->
+
+                <article class="game-card"
+                         data-category="aventura"
+                         data-name="Pixel Adventure">
+
+                    <div class="game-image pixel-adventure">
+
+                        <div class="game-icon">
+                            🗺️
+                        </div>
+
+                    </div>
+
+                    <div class="game-info">
+
+                        <p class="game-category">
+                            AVENTURA
+                        </p>
+
+                        <h3>
+                            Pixel Adventure
+                        </h3>
+
+                        <p>
+                            Explora un mundo
+                            lleno de secretos.
+                        </p>
+
+                        <button class="play-button"
+                                onclick="playGame('Pixel Adventure')">
+
+                            JUGAR AHORA
+                            <span>▶</span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- SIN RESULTADOS -->
+
+            <div id="noResults"
+                 class="no-results">
+
+                <div>
+                    🔍
+                </div>
+
+                <h3>
+                    No encontramos juegos
+                </h3>
+
+                <p>
+                    Intenta buscar con otro nombre.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SECCIÓN SOBRE EL PORTAL
+        =========================================== -->
+
+        <section class="about">
+
+            <div class="about-box">
+
+                <div class="about-icon">
+                    🎮
+                </div>
+
+                <div>
+
+                    <p class="section-label">
+                        NEXUS ARCADE
+                    </p>
+
+                    <h2>
+                        VIDEOJUEGOS DIRECTAMENTE
+                        EN TU NAVEGADOR
+                    </h2>
+
+                    <p>
+                        Nuestra plataforma reúne videojuegos
+                        desarrollados para jugarse directamente
+                        desde Internet.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+         MODAL DEL JUEGO
+    =========================================== -->
+
+    <div class="game-modal"
+         id="gameModal">
+
+        <div class="modal-content">
+
+            <button class="close-modal"
+                    onclick="closeGame()">
+
+                ×
+
+            </button>
+
+            <div class="modal-header">
+
+                <span>
+                    🎮 NEXUS ARCADE
+                </span>
+
+                <span id="currentGame">
+                    Cyber Run
+                </span>
+
+            </div>
+<div class="game-screen">
+
+    <iframe
+        id="gameFrame"
+        src=""
+        title="Videojuego"
+        allow="fullscreen">
+    </iframe>
+
+</div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            ◈ NEXUS ARCADE
+        </div>
+
+        <p>
+            © 2026 Nexus Arcade.
+            Todos los derechos reservados.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="#">
+                Inicio
+            </a>
+
+            <a href="#">
+                Juegos
+            </a>
+
+            <a href="#">
+                Contacto
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
