@@ -1,0 +1,299 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #21113d,
+            #08080f 65%
+        );
+
+    font-family: Arial, sans-serif;
+
+    color: white;
+
+    overflow: hidden;
+}
+
+
+/* ===============================
+   CONTENEDOR
+================================ */
+
+.game-container {
+    width: min(1000px, 95vw);
+}
+
+
+/* ===============================
+   HEADER
+================================ */
+
+.game-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 25px;
+
+    background: #0d0d17;
+
+    border: 1px solid #28283a;
+    border-bottom: none;
+
+    border-radius: 12px 12px 0 0;
+}
+
+.label {
+    color: #ff2bd6;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+}
+
+h1 {
+    margin-top: 5px;
+
+    font-size: 28px;
+
+    letter-spacing: 4px;
+}
+
+.stats {
+    display: flex;
+
+    gap: 35px;
+}
+
+.stats div {
+    text-align: right;
+}
+
+.stats span {
+    display: block;
+
+    color: #777;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+.stats strong {
+    display: block;
+
+    color: #ff2bd6;
+
+    font-size: 22px;
+
+    margin-top: 4px;
+}
+
+
+/* ===============================
+   CANVAS
+================================ */
+
+.canvas-wrapper {
+    position: relative;
+
+    width: 100%;
+}
+
+canvas {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    background: #080812;
+
+    border: 1px solid #28283a;
+}
+
+
+/* ===============================
+   PANTALLAS
+================================ */
+
+.screen {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(5, 5, 12, 0.78);
+
+    backdrop-filter: blur(4px);
+}
+
+.hidden {
+    display: none;
+}
+
+.screen-box {
+    width: 400px;
+
+    max-width: 90%;
+
+    padding: 40px;
+
+    text-align: center;
+
+    background: #10101c;
+
+    border: 1px solid #7c3cff;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 0 50px rgba(124, 60, 255, 0.25);
+}
+
+.big-icon {
+    font-size: 65px;
+
+    margin-bottom: 15px;
+
+    filter:
+        drop-shadow(0 0 20px #ff2bd6);
+}
+
+.screen-box h2 {
+    font-size: 32px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
+}
+
+.screen-box p {
+    color: #999;
+
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+}
+
+.controls {
+    color: #ff2bd6 !important;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ===============================
+   BOTONES
+================================ */
+
+button {
+    margin-top: 15px;
+
+    padding: 14px 25px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #7c3cff,
+            #ff2bd6
+        );
+
+    color: white;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 25px rgba(255, 43, 214, 0.3);
+}
+
+
+/* ===============================
+   FOOTER
+================================ */
+
+.game-footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 12px 20px;
+
+    background: #0d0d17;
+
+    border: 1px solid #28283a;
+    border-top: none;
+
+    border-radius: 0 0 12px 12px;
+
+    color: #666;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 650px) {
+
+    .game-header {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .stats {
+        gap: 15px;
+    }
+
+    .stats strong {
+        font-size: 16px;
+    }
+
+    .game-footer {
+        flex-direction: column;
+
+        gap: 7px;
+
+        text-align: center;
+    }
+
+}

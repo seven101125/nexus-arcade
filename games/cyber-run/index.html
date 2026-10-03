@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Run</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <div class="game-header">
+            <div>
+                <span class="label">NEXUS ARCADE</span>
+                <h1>CYBER RUN</h1>
+            </div>
+
+            <div class="stats">
+                <div>
+                    <span>PUNTOS</span>
+                    <strong id="score">0</strong>
+                </div>
+
+                <div>
+                    <span>RÉCORD</span>
+                    <strong id="highScore">0</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="canvas-wrapper">
+            <canvas id="gameCanvas" width="900" height="500"></canvas>
+
+            <div id="startScreen" class="screen">
+                <div class="screen-box">
+                    <div class="big-icon">⚡</div>
+
+                    <h2>CYBER RUN</h2>
+
+                    <p>
+                        Corre, salta y evita los obstáculos.
+                    </p>
+
+                    <p class="controls">
+                        ESPACIO / ↑ = SALTAR
+                    </p>
+
+                    <button id="startButton">
+                        INICIAR PARTIDA
+                    </button>
+                </div>
+            </div>
+
+            <div id="gameOverScreen" class="screen hidden">
+                <div class="screen-box">
+
+                    <div class="big-icon">💥</div>
+
+                    <h2>GAME OVER</h2>
+
+                    <p>
+                        Puntuación:
+                        <strong id="finalScore">0</strong>
+                    </p>
+
+                    <button id="restartButton">
+                        VOLVER A JUGAR
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="game-footer">
+            <span>⚡ CYBER RUN</span>
+            <span>EVITA LOS OBSTÁCULOS</span>
+            <span>SPACE / ↑ PARA SALTAR</span>
+        </div>
+
+    </div>
+
+    <script src="game.js"></script>
+
+</body>
+</html>
